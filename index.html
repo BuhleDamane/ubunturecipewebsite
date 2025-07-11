@@ -44,6 +44,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,62 +68,142 @@
 }
 </script>
     <style>
-        * {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        :root {
+    --font-brand: 'Ubuntu', sans-serif;
+    --font-heading: 'Crimson Text', serif;
+    --font-body: 'Inter', sans-serif;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #2D5016;
+}
+body, p, li, span {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+.nav-link {
+    font-family: var(--font-brand);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+  body {
+
+            font-family: var(--font-body);
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
         }
 
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
+   .navbar {
+    background: #8B4513;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
 
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ff6b35;
-            text-decoration: none;
-        }
+.logo, .brand-name, .nav-logo h2 {
+    font-family: var(--font-brand);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.nav-logo h2 {
+    color: #DAA520;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
 
-        .nav-links a:hover, .nav-links a.active {
-            color: #ff6b35;
-        }
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #DAA520;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+
+.mobile-nav {
+    display: none;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    margin: 15px 0;
+}
+
+.mobile-nav-links .nav-link {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
         .hero {
             height: 100vh;
@@ -620,19 +704,90 @@
                 grid-template-columns: 1fr;
             }
         }
+        @media (max-width: 768px) {
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Show mobile navigation when active */
+    .mobile-nav.active {
+        display: block;
+        transform: translateY(0);
+    }
+    
+    /* Animate hamburger menu */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mobile-nav-links {
+        padding: 15px;
+    }
+}
     </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Ubuntu Recipes</a>
+            <div class="nav-logo"> <h2>Ubuntu Recipes</h2></div>
+          
             <ul class="nav-links">
                 <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
                 <li><a href="#" class="nav-link" data-page="recipes">Recipes</a></li>
                 <li><a href="#" class="nav-link" data-page="about">About</a></li>
                 <li><a href="#" class="nav-link" data-page="contact">Contact Us</a></li>
             </ul>
+             <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="#recipes" class="nav-link" data-page="recipes">Recipes</a></li>
+            <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+            <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
         </div>
     </nav>
 
@@ -1282,6 +1437,44 @@
         document.body.style.opacity = '0';
         document.body.style.transition = 'opacity 0.5s ease';
     </script>
-   
+   <script>
+// Mobile Navigation Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
+    
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        if (mobileNav.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close mobile menu when link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mobileMenuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+            mobileMenuBtn.classList.remove('active');
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+</script>
 </body>
 </html>
