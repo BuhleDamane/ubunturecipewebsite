@@ -46,6 +46,9 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
  <script type="application/ld+json">
@@ -75,11 +78,12 @@
         }
         :root {
     --font-brand: 'Ubuntu', sans-serif;
-    --font-heading: 'Crimson Text', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: "Merriweather", serif;
+    --font-body: "Roboto", sans-serif;
+    --font-links: "Lora", serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
@@ -91,8 +95,13 @@ body, p, li, span {
     line-height: 1.6;
     color: #333;
 }
+a{
+    text-decoration: none;
+    color: #2D5016;
+    transition: color 0.3s ease;
+}
 .nav-link {
-    font-family: var(--font-brand);
+    font-family: var(--font-links);
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -234,17 +243,32 @@ body, p, li, span {
             opacity: 1;
         }
 
-        .hero-slide:nth-child(1) {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23d4a574" width="800" height="600"/><text x="400" y="300" font-family="Arial" font-size="48" text-anchor="middle" fill="white">Boerewors & Pap</text></svg>');
-        }
+      .hero-slide:nth-child(1) {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/66735cc6ff8b87e61a44f52f9b6da385_resized_20250729_014852089.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #d4a574; 
+    min-height: 400px; 
+}
 
-        .hero-slide:nth-child(2) {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23b85450" width="800" height="600"/><text x="400" y="300" font-family="Arial" font-size="48" text-anchor="middle" fill="white">Biltong & Droëwors</text></svg>');
-        }
+.hero-slide:nth-child(2) {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/7409516045a7a5cd43ccceb06e54476d.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #b85450; 
+    min-height: 400px; 
+}
 
-        .hero-slide:nth-child(3) {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23228b22" width="800" height="600"/><text x="400" y="300" font-family="Arial" font-size="48" text-anchor="middle" fill="white">Bunny Chow</text></svg>');
-        }
+.hero-slide:nth-child(3) {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Screenshot_20250729_014754.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #228b22; 
+    min-height: 400px; 
+}
 
         .hero-content {
             text-align: center;
@@ -270,7 +294,7 @@ body, p, li, span {
 
         .mission {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: linear-gradient(135deg, #8B1538 );
             color: white;
             text-align: center;
         }
@@ -583,11 +607,115 @@ body, p, li, span {
             font-size: 1.5rem;
         }
 
-        .about-content {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.98));
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d4a574, #b85450, #228b22);
+}
+
+.about-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50 ;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    letter-spacing: -0.5px;
+}
+
+.about-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4a574, #b85450);
+    border-radius: 2px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 24px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-indent: 30px;
+}
+
+.about-content p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.about-content p:last-of-type {
+    margin-bottom: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(184, 84, 80, 0.1));
+    border-left: 4px solid #d4a574;
+    border-radius: 8px;
+    font-style: italic;
+    text-indent: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 40px 24px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+    
+    .about-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+        text-indent: 20px;
+    }
+    
+    .about-content p:last-of-type {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 30px 20px;
+        margin: 16px;
+    }
+    
+    .about-content h1 {
+        font-size: 1.9rem;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        text-indent: 16px;
+    }
+}
 
         .chefs-section {
             display: grid;
@@ -735,7 +863,6 @@ body, p, li, span {
     }
 }
 
-/* Tablet Styles */
 @media (max-width: 1024px) and (min-width: 769px) {
     .nav-links {
         gap: 20px;
@@ -746,7 +873,6 @@ body, p, li, span {
     }
 }
 
-/* Small Mobile Styles */
 @media (max-width: 480px) {
     .nav-container {
         padding: 0 15px;
@@ -815,7 +941,7 @@ body, p, li, span {
             <div class="dishes-container">
                 <div class="dishes-slider">
                     <div class="dish-card">
-                        <div class="dish-image">Boerewors Image</div>
+                        <div class="dish-image"><img style="height: 200px; width:100%" src="images/pap and wors.jpg" alt=""></div>
                         <h3>Boerewors</h3>
                         <p>Traditional South African sausage made with coarsely ground beef and spices, perfect for braai...</p>
                     </div>
@@ -854,12 +980,7 @@ body, p, li, span {
 
         <footer class="footer">
             <p>&copy; 2025 Ubuntu Recipes. Celebrating South African cuisine with love.</p>
-            <div class="social-links">
-                <a href="#" title="WhatsApp">📱</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Twitter">🐦</a>
-            </div>
+            
         </footer>
     </div>
 
@@ -991,12 +1112,7 @@ body, p, li, span {
 
         <footer class="footer">
             <p>&copy; 2025 Ubuntu Recipes. Celebrating South African cuisine with love.</p>
-            <div class="social-links">
-                <a href="#" title="WhatsApp">📱</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Twitter">🐦</a>
-            </div>
+            
         </footer>
     </div>
 
@@ -1009,14 +1125,14 @@ body, p, li, span {
 
             <div class="chefs-section">
                 <div class="chef-card">
-                    <div class="chef-image">Chef Nomsa</div>
+                    <div class="chef-image"><img style="height:100px; width:100px; border-radius:50%;" src="images/chef1.jpg" alt=""></div>
                     <h3>Chef Nomsa Mbeki</h3>
                     <p>Traditional cuisine specialist with 20 years of experience preserving authentic South African recipes. Nomsa specializes in indigenous dishes and traditional cooking methods.</p>
                     <p><strong>Contact:</strong> nomsa@ubunturecipes.co.za</p>
                 </div>
                 
                 <div class="chef-card">
-                    <div class="chef-image">Chef Pieter</div>
+                    <div class="chef-image"><img style="height:100px; width:100px; border-radius:50%;"  src="images/chef2.jpg" alt=""></div>
                     <h3>Chef Pieter van der Merwe</h3>
                     <p>Modern South African cuisine expert who blends traditional flavors with contemporary techniques. Pieter is known for his innovative approach to braai and potjiekos.</p>
                     <p><strong>Contact:</strong> pieter@ubunturecipes.co.za</p>
@@ -1026,12 +1142,7 @@ body, p, li, span {
 
         <footer class="footer">
             <p>&copy; 2025 Ubuntu Recipes. Celebrating South African cuisine with love.</p>
-            <div class="social-links">
-                <a href="#" title="WhatsApp">📱</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Twitter">🐦</a>
-            </div>
+           
         </footer>
     </div>
 
@@ -1057,12 +1168,6 @@ body, p, li, span {
 
         <footer class="footer">
             <p>&copy; 2025 Ubuntu Recipes. Celebrating South African cuisine with love.</p>
-            <div class="social-links">
-                <a href="#" title="WhatsApp">📱</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Twitter">🐦</a>
-            </div>
         </footer>
     </div>
 
