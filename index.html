@@ -226,13 +226,13 @@ a{
         .hero-slider {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 100vh;
         }
 
         .hero-slide {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 90vh;
             opacity: 0;
             transition: opacity 1s ease-in-out;
             background-size: cover;
@@ -243,32 +243,32 @@ a{
             opacity: 1;
         }
 
-      .hero-slide:nth-child(1) {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/66735cc6ff8b87e61a44f52f9b6da385_resized_20250729_014852089.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #d4a574; 
-    min-height: 400px; 
-}
+            .hero-slide:nth-child(1) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #d4a574; 
+            min-height: 400px; 
+        }
 
-.hero-slide:nth-child(2) {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/7409516045a7a5cd43ccceb06e54476d.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #b85450; 
-    min-height: 400px; 
-}
+        .hero-slide:nth-child(2) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #b85450; 
+            min-height: 400px; 
+        }
 
-.hero-slide:nth-child(3) {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Screenshot_20250729_014754.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #228b22; 
-    min-height: 400px; 
-}
+        .hero-slide:nth-child(3) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #228b22; 
+            min-height: 400px; 
+        }
 
         .hero-content {
             text-align: center;
@@ -294,35 +294,45 @@ a{
 
         .mission {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, #8B1538 );
+            background: linear-gradient(135deg, #8b1538e7 );
             color: white;
             text-align: center;
+            margin-top: 90px !important;
+            width: 70%;
+            border-radius: 10px;
+            margin: 0 auto;
         }
 
         .mission h2 {
             font-size: 3rem;
             margin-bottom: 2rem;
+            color: #DAA520;
         }
 
         .mission p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             max-width: 1000px;
             margin: 0 auto;
             line-height: 1.8;
+            color: #fff;
+            font-weight: 200;
         }
 
         .featured {
             padding: 5rem 2rem;
             background: #f8f9fa;
+            
         }
 
         .featured h2 {
             text-align: center;
             font-size: 3rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #DAA520 !important;
         }
-
+        .featured h3{
+            color: #8B1538 !important;
+        }
         .dishes-container {
             overflow: hidden;
             width: 100%;
@@ -341,6 +351,7 @@ a{
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            margin-bottom: 30px;
         }
 
         .dish-card:hover {
@@ -366,17 +377,26 @@ a{
         }
 
         .newsletter {
-            padding: 5rem 2rem;
-            background: #333;
+            padding: 3rem 2rem;
+            background: #DAA520;
             color: white;
             text-align: center;
+            width: 70%;
+            margin: 0 auto;
+            height: 250px;
+            border-radius: 10px;
+
         }
 
         .newsletter h2 {
+            color: #8B1538;
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
-
+        .newsletter p{
+            color: #fff;
+            font-weight: 200;
+        }
         .newsletter-form {
             max-width: 500px;
             margin: 0 auto;
@@ -394,7 +414,7 @@ a{
 
         .newsletter-form button {
             padding: 1rem 2rem;
-            background: #ff6b35;
+            background: #8B1538;
             color: white;
             border: none;
             border-radius: 5px;
@@ -408,12 +428,16 @@ a{
         }
 
         .footer {
-            background: #222;
-            color: white;
+            margin-top: 50px;
+            background: #8B1538 !important;
+            color: white !important;
             padding: 3rem 2rem;
             text-align: center;
         }
-
+        .footer p{
+            color: #fff;
+            font-size: 0.8rem;
+        }
         .social-links {
             display: flex;
             justify-content: center;
@@ -442,12 +466,22 @@ a{
         }
 
         .recipes-hero {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            background: linear-gradient(135deg, #8b1538e7);
             color: white;
             padding: 5rem 2rem;
             text-align: center;
-        }
+            margin: 0 auto;
+            width: 70%;
+            border-radius: 10px;
 
+        }
+        .recipes-hero h1{
+            color: #DAA520;
+        }
+        .recipes-hero p{
+            color: #fff;
+            font-weight: 200;
+        }
         .recipes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -676,7 +710,7 @@ a{
     text-indent: 0;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .about-content {
         padding: 40px 24px;
@@ -833,23 +867,19 @@ a{
             }
         }
         @media (max-width: 768px) {
-    /* Hide desktop navigation */
     .nav-links {
         display: none;
     }
     
-    /* Show mobile menu button */
     .mobile-menu-btn {
         display: flex;
     }
     
-    /* Show mobile navigation when active */
     .mobile-nav.active {
         display: block;
         transform: translateY(0);
     }
     
-    /* Animate hamburger menu */
     .mobile-menu-btn.active span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -941,27 +971,27 @@ a{
             <div class="dishes-container">
                 <div class="dishes-slider">
                     <div class="dish-card">
-                        <div class="dish-image"><img style="height: 200px; width:100%" src="images/pap and wors.jpg" alt=""></div>
+                        <div class="dish-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/pap and wors.jpg" alt=""></div>
                         <h3>Boerewors</h3>
                         <p>Traditional South African sausage made with coarsely ground beef and spices, perfect for braai...</p>
                     </div>
                     <div class="dish-card">
-                        <div class="dish-image">Bunny Chow Image</div>
+                        <div class="dish-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/bunny chow.jpg" alt=""></div>
                         <h3>Bunny Chow</h3>
                         <p>Durban's famous street food - curry served in a hollowed-out loaf of bread...</p>
                     </div>
                     <div class="dish-card">
-                        <div class="dish-image">Potjiekos Image</div>
+                        <div class="dish-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Potjiekos.jpg" alt=""></div>
                         <h3>Potjiekos</h3>
                         <p>Slow-cooked stew prepared in a cast-iron pot over open coals...</p>
                     </div>
                     <div class="dish-card">
-                        <div class="dish-image">Biltong Image</div>
+                        <div class="dish-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/pap and wors.jpg" alt=""></div>
                         <h3>Biltong</h3>
                         <p>Air-dried meat seasoned with vinegar, salt, and spices...</p>
                     </div>
                     <div class="dish-card">
-                        <div class="dish-image">Koeksisters Image</div>
+                        <div class="dish-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Samoosas.jpg" alt=""></div>
                         <h3>Koeksisters</h3>
                         <p>Sweet, syrupy twisted pastry that's a beloved South African treat...</p>
                     </div>
@@ -971,7 +1001,9 @@ a{
 
         <section class="newsletter">
             <h2>Stay Updated</h2>
+            
             <p>Subscribe to our newsletter for the latest authentic South African recipes and cooking tips!</p>
+            <br>
             <form class="newsletter-form">
                 <input type="email" placeholder="Enter your email">
                 <button type="submit">Subscribe</button>
@@ -987,13 +1019,14 @@ a{
     <div id="recipes" class="page-section">
         <div class="recipes-hero">
             <h1>Welcome to Our Kitchen!</h1>
+            <br>
             <p>Discover authentic South African dishes crafted by our featured chefs: Chef Nomsa Mbeki and Chef Pieter van der Merwe. From hearty breakfast dishes to satisfying dinners, we have something for every meal of the day.</p>
         </div>
 
         <div class="recipes-grid">
    
             <div class="recipe-card" data-recipe="boerewors-eggs">
-                <div class="recipe-image">Boerewors & Eggs</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Breakfast</span>
                     <h3>Boerewors & Eggs</h3>
@@ -1002,7 +1035,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="beskuit-rusks">
-                <div class="recipe-image">Beskuit Rusks</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/pap and wors.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Breakfast</span>
                     <h3>Beskuit Rusks</h3>
@@ -1011,7 +1044,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="pap-wors">
-                <div class="recipe-image">Pap & Wors</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/mabele porridge.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Breakfast</span>
                     <h3>Pap & Wors</h3>
@@ -1020,7 +1053,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="vetkoek">
-                <div class="recipe-image">Vetkoek</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Screenshot_20250729_014754.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Breakfast</span>
                     <h3>Vetkoek</h3>
@@ -1029,7 +1062,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="bunny-chow">
-                <div class="recipe-image">Bunny Chow</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/bunny chow.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Lunch</span>
                     <h3>Bunny Chow</h3>
@@ -1038,7 +1071,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="gatsby">
-                <div class="recipe-image">Gatsby</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/gatsby.jpeg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Lunch</span>
                     <h3>Gatsby</h3>
@@ -1047,7 +1080,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="sosaties">
-                <div class="recipe-image">Sosaties</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Sosaties.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Lunch</span>
                     <h3>Sosaties</h3>
@@ -1056,7 +1089,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="samoosas">
-                <div class="recipe-image">Samoosas</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Samoosas.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Lunch</span>
                     <h3>Samoosas</h3>
@@ -1065,7 +1098,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="potjiekos">
-                <div class="recipe-image">Potjiekos</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Potjiekos.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Dinner</span>
                     <h3>Potjiekos</h3>
@@ -1074,7 +1107,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="snoek-braai">
-                <div class="recipe-image">Snoek Braai</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/pap and chakalaka1.jpg alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Dinner</span>
                     <h3>Snoek Braai</h3>
@@ -1083,7 +1116,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="oxtail-stew">
-                <div class="recipe-image">Oxtail Stew</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Oxtail Stew.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Dinner</span>
                     <h3>Oxtail Stew</h3>
@@ -1092,7 +1125,7 @@ a{
             </div>
 
             <div class="recipe-card" data-recipe="lamb-curry">
-                <div class="recipe-image">Lamb Curry</div>
+                <div class="recipe-image"><img style="height: 200px; width:100%; border-radius:6px;" src="images/Lamb Curry.jpg" alt=""></div>
                 <div class="recipe-info">
                     <span class="recipe-category">Dinner</span>
                     <h3>Lamb Curry</h3>
@@ -1104,6 +1137,7 @@ a{
         <section class="newsletter">
             <h2>Share Your Recipe</h2>
             <p>Have a traditional South African recipe you'd like to share? We'd love to hear from you!</p>
+           <br>
             <form class="newsletter-form">
                 <input type="email" placeholder="Your email">
                 <button type="submit">Share Recipe</button>
